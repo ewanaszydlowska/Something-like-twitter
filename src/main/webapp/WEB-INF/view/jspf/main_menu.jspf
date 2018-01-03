@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page session="true"%>
+<p>
+	<c:choose>
+		<c:when test="${sessionScope.user==null}">
+			Menu -> <a href="http://localhost:8080/Warsztat6/">Strona glowna</a> | <a
+			href="http://localhost:8080/Warsztat6/register">Zarejestruj sie!</a> |
+			<a href="http://localhost:8080/Warsztat6/login">Zaloguj sie</a>
+		</c:when>
+		<c:otherwise>
+			Menu -> <a href="http://localhost:8080/Warsztat6/">Strona glowna</a> | <a
+			href="http://localhost:8080/Warsztat6/register">Zarejestruj sie!</a> |
+	 		<a href="http://localhost:8080/Warsztat6/logout">Wyloguj</a>
+		</c:otherwise>
+	</c:choose>
+
+</p>
